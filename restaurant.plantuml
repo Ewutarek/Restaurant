@@ -1,0 +1,31 @@
+@startuml
+
+class Restuarant {
+    name STRING
+    image STRING
+    city STRING
+    menus Array<Menu>
+    addMenus() void
+}
+
+class Menu{
+    title STRING
+    icon STRING
+    items Array<Item>
+    additems() void
+}
+
+class Item{
+    name STRING
+    price FLOAT
+    type STRING
+    getAllergens() void
+}
+
+
+Restuarant--{Menu: has many
+Menu--{Item: has many
+
+
+@enduml
+
